@@ -1,0 +1,17 @@
+.header-content {
+  min-height: 75vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(1, 25, 70, 0.5)),
+    url("../../images/perpus1.jpg") center/cover no-repeat;
+  flex-direction: column;
+}
+.header-title {
+  font-size: 4.2rem;
+  margin-bottom: 2rem;
+}
+
+.header-text {
+  margin-top: -0.8rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  max-width: 770px;
+}
