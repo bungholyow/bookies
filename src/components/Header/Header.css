@@ -1,7 +1,7 @@
 .header-content {
   min-height: 75vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(1, 25, 70, 0.5)),
-    url("../../images/perpus1.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(13, 10, 211, 0.534), rgba(0, 0, 0, 0.5)),
+    url("../../images/lib1.avif") center/cover no-repeat;
   flex-direction: column;
 }
 .header-title {

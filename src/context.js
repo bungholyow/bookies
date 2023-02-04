@@ -4,7 +4,7 @@ const URL = "https://openlibrary.org/search.json?title=";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [searchTerm, setSearchTerm] = useState("the lost world");
+  const [searchTerm, setSearchTerm] = useState("random");
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [resultTitle, setResultTitle] = useState("");
@@ -25,6 +25,7 @@ const AppProvider = ({ children }) => {
             edition_count,
             first_publish_year,
             title,
+            language,
           } = bookSingle;
 
           return {
@@ -34,19 +35,20 @@ const AppProvider = ({ children }) => {
             edition_count: edition_count,
             first_publish_year: first_publish_year,
             title: title,
+            language: language,
           };
         });
 
         setBooks(newBooks);
 
         if (newBooks.length > 1) {
-          setResultTitle("Your Search Result");
+          setResultTitle("Hasil Pencarian :");
         } else {
-          setResultTitle("No Search Result Found!");
+          setResultTitle("pencarian tidak ditemukan!");
         }
       } else {
         setBooks([]);
-        setResultTitle("No Search Result Found!");
+        setResultTitle("pencarian tidak ditemukan!");
       }
       setLoading(false);
     } catch (error) {

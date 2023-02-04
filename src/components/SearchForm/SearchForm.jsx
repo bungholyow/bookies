@@ -14,13 +14,13 @@ const SearchForm = () => {
         e.preventDefault();
         let tempSearchTerm = searchText.current.value.trim();
         if ((tempSearchTerm.replace(/[^\w\s]/gi, "")).length === 0) {
-            setSearchTerm("the lost world");
-            setResultTitle("masukkan kata kunci ...");
+            setSearchTerm("random");
+            setResultTitle("masukkan kata kunci...");
         } else {
             setSearchTerm(searchText.current.value);
         }
 
-        navigate("/book");
+        navigate("/buku");
     };
 
     return (
@@ -31,7 +31,7 @@ const SearchForm = () => {
                         <div className='search-form-elem flex flex-sb bg-white'>
                             <input type="text" className='form-control' placeholder='judul buku disini...' ref={searchText} />
                             <button type="submit" className='flex flex-c' onClick={handleSubmit}>
-                                <FaSearch className='text-purple' size={32} />
+                                <FaSearch className='text-brown' size={32} />
                             </button>
                         </div>
                     </form>
